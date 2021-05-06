@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+*, :after, :before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 1200px;
+  font-size: 18px;
+  font-family: Verdana, sans-serif;
+  color: #5D6063;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: end;
+}
+
+.logo-group {
+  display: flex;
+  justify-content: initial;
+}
+
+main {
+  padding: 50px;
+}
