@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {FormBuilder} from '@angular/forms';
 
 @Component({
   selector: 'app-create-customer',
@@ -6,10 +7,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-customer.component.css']
 })
 export class CreateCustomerComponent implements OnInit {
+  createCustomerForm = this.formBuilder.group({
+    firstName: '',
+    lastName: '',
+    email: '',
+    code: '',
+    phoneNumber: '',
+    street: '',
+    number: '',
+    postalCode: '',
+    country: ''
+  });
 
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) {
+  }
 
   ngOnInit(): void {
   }
 
+  onSubmit(): void {
+
+  }
 }

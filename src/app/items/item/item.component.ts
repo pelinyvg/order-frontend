@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {ItemService} from '../service/item.service';
+import {ItemService} from '../../service/item.service';
+import {Item} from '../../model/item';
 
 @Component({
   selector: 'app-item',
@@ -7,6 +8,9 @@ import {ItemService} from '../service/item.service';
   styleUrls: ['./item.component.css']
 })
 export class ItemComponent implements OnInit {
+  items: Item[] = [];
+  itemSelected: Item | any;
+  searchText: any;
 
   constructor(private itemService: ItemService) { }
 
@@ -15,6 +19,8 @@ export class ItemComponent implements OnInit {
   }
 
   getItems(): void {
-    this.itemService.getItems().subscribe();
+    this.itemService.getItems().subscribe(
+      items => this.items  = items
+    );
   }
 }
