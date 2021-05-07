@@ -10,6 +10,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateCustomerComponent } from './customers/create-customer/create-customer.component';
 import { NameFilterPipe } from './pipes/name-filter.pipe';
 import { CreateItemComponent } from './items/create-item/create-item.component';
+import { CountdownPipe } from './pipes/countdown.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { CreateItemComponent } from './items/create-item/create-item.component';
     ItemComponent,
     CreateCustomerComponent,
     NameFilterPipe,
-    CreateItemComponent
+    CreateItemComponent,
+    CountdownPipe
   ],
   imports: [
     BrowserModule,

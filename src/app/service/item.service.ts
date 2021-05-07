@@ -21,4 +21,8 @@ export class ItemService {
   public getItem(id: number): Observable<Item> {
     return this.http.get<Item>(`${this.host}/${id}`);
   }
+
+  public addItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.host, item);
+  }
 }
